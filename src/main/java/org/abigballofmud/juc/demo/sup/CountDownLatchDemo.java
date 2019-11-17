@@ -1,4 +1,4 @@
-package org.abigballofmud.juc.demo;
+package org.abigballofmud.juc.demo.sup;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

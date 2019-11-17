@@ -1,6 +1,5 @@
-package org.abigballofmud.juc.demo;
+package org.abigballofmud.juc.demo.lockcondition;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -29,7 +28,7 @@ public class SaleTicketDemo {
         int saleNumber = 20;
         // Thread.start()后变为就绪状态，等待操作系统分配CPU去运行
         // 线程的几种状态 Thread.State
-        ExecutorService executorService = ThreadPoolUtil.getExecutorService();
+        // ExecutorService executorService = ThreadPoolUtil.getExecutorService();
         ThreadPoolTaskExecutor asyncExecutor = ThreadPoolUtil.getAsyncExecutor();
         for (int i = 0; i < saleNumber; i++) {
             // executorService.execute(ticket::saleTicket);

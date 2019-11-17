@@ -1,4 +1,4 @@
-package org.abigballofmud.juc.demo;
+package org.abigballofmud.juc.demo.copyonwrite;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
