@@ -35,13 +35,13 @@ public class ThreadPoolUtil {
                 /*
                  * 使用谷歌的guava框架
                  * ThreadPoolExecutor参数解释
-                 *   1.corePoolSize 核心线程池大小
-                 *   2.maximumPoolSize 线程池最大容量大小
-                 *   3.keepAliveTime 线程池空闲时，线程存活的时间
+                 *   1.corePoolSize 常驻核心线程池大小
+                 *   2.maximumPoolSize 线程池最大线程数 必须>=1
+                 *   3.keepAliveTime 多余的空闲线程存活时间
                  *   4.TimeUnit 时间单位
-                 *   5.ThreadFactory 线程工厂
-                 *   6.BlockingQueue任务队列
-                 *   7.RejectedExecutionHandler 线程拒绝策略
+                 *   5.BlockingQueue 任务队列
+                 *   6.ThreadFactory 线程工厂用于创建线程
+                 *   7.RejectedExecutionHandler 队列满了并且工作线程等于最大线程 线程拒绝策略
                  */
                 if (Objects.isNull(executorService)) {
                     ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("thread-pool-%d").build();
