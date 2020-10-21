@@ -18,7 +18,7 @@ public class CompletableFutureDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // 同步调用
-        CompletableFuture completableFuture = CompletableFuture.runAsync(() ->
+        CompletableFuture<Void> completableFuture = CompletableFuture.runAsync(() ->
                 log.debug("{}, 无返回值", Thread.currentThread().getName())
         );
         completableFuture.get();
